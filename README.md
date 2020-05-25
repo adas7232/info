@@ -204,6 +204,10 @@ then invoke the following -
 ```sh
 make git m="your message"
 ```
+** To show the remote origin**
+```sh
+git remote show origin
+```
 **To change the url from hhtps to ssh**
 ```sh
 git remote set-url origin git+ssh://git@github.com/username/reponame.git
