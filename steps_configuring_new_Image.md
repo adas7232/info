@@ -55,5 +55,5 @@ Host anyname
   ```
 Please note that if you are using ssh for the first time in vscode, then you may need the following extensions installed for successful ssh connection. 
 1. Remote Development
-2. Remote SSH (Nightly)
+2. Remote SSH (Nightly)   
 Now ssh connection from vscode (Windows) to raspberry pi is established. 
