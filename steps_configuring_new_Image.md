@@ -1,15 +1,15 @@
 ### Step 1 ###
-**Taking ownership of the home directory/folder**
+**Taking ownership of the home directory/folder**  
 When using someone else's image, most likely the ownership is not transferred. Transfer the ownership of the home directory or a particular folder by using the command below 
 ```
 sudo chown -R pi:pi /home/pi/
 sudo chmod -R 750 /home/pi
 ```
 ### Step 2 ###
-**Activating Wireless**
+**Activating Wireless**  
 wireless can be added by using ```raspi_config``` command if using raspbian
 
-### Step 3 ###
+### Step 3 ###  
 **Configuring ROS - Creating new workspace**
 ```mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
@@ -19,7 +19,7 @@ source devel/setup.bash
 
 ### Step 4 ###
 
-**Configuring git - generate ssh key pair from server and add it to git**
+**Configuring git - generate ssh key pair from server and add it to git**  
 Note that, the .ssh folder may be in /root. If so, create a .ssh folder in home directory (```/home/pi/.ssh```).
 Generate ssh key pair in the newly created directory using folder command as shown below - 
 ```ssh-keygen -t rsa -f home/pi/.ssh/id_rsa```
@@ -34,6 +34,7 @@ Test the ssh connection by
 ```ssh -T git@github.com```
 If successful, do the git clone from the existing git repository 
 ```/home/pi/catkin_ws/src/```
-**Creating new package - same name of existing git repo**
+
+**Creating new package - same name of existing git repo**  
 Assuming the package is already backed-up in git, this step not be needed. Just try to do ```catkin_make``` from ```/home/pi/catkin_ws/```. If not successful, then try the following command 
 ```catkin_create_pkg rpi_ros_car std_msgs geometry_msgs rospy roscpp```
