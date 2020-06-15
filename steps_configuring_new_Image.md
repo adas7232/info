@@ -16,7 +16,6 @@ cd ~/catkin_ws/
 catkin_make
 source devel/setup.bash
 ```
-
 ### Step 4 ###
 
 **Configuring git - generate ssh key pair from server and add it to git**  
@@ -45,7 +44,7 @@ Assuming the package is already backed-up in git, this step not be needed. Just 
 If ssh key pair already exists for windows, then copy the public key content into clipboard. If not, generate one either with *openssh* or *puttygen*. On the server side, go to ```/home/pi/.ssh/``` and open a empty file using *nano* or *vi*. Copy the content of the clipboard (public ssh key) into the file and save it as *autorized_keys* 
 Check the connection by going into the Windows command window and type 
 ```ssh pi@ipaddress```
-The connection should happen without any issues. Then, go to *vscode* and use *CTRL+SHIFT+P* to open the command pallete and search for ssh. click *Open Configuration File* and edit it as below 
+The connection should happen without any issues. Then, go to *vscode* and use *F1* or *ctrl + shift + P* to open the command pallete and search for ssh. click *Open Configuration File* and edit it as below 
 ```
 Host anyname
   HostName ip-address
@@ -54,3 +53,7 @@ Host anyname
   IdentityFile C:\Users\user\.ssh\id_rsa
   Port 22
   ```
+Please note that if you are using ssh for the first time in vscode, then you may need the following extensions installed for successful ssh connection. 
+1. Remote Development
+2. Remote SSH (Nightly)
+Now ssh connection from vscode (Windows) to raspberry pi is established. 
