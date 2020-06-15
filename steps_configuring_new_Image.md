@@ -14,7 +14,8 @@ wireless can be added by using ```raspi_config``` command if using raspbian
 ```mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/
 catkin_make
-source devel/setup.bash```
+source devel/setup.bash
+```
 
 ### Step 4 ###
 
@@ -27,9 +28,12 @@ Now open the pub key with vi editor and copy the public key
 Now add this new key to github. 
 In the server, add the git user 
 ```git config --global user.email "you@example.com"
-git config --global user.name "Your Name"```
+git config --global user.name "Your Name"
+```
 Test the ssh connection by 
 ```ssh -T git@github.com```
-
-**Creating new package**
+If successful, do the git clone from the existing git repository 
+```/home/pi/catkin_ws/src/```
+**Creating new package - same name of existing git repo**
+Assuming the package is already backed-up in git, this step not be needed. Just try to do ```catkin_make``` from ```/home/pi/catkin_ws/```. If not successful, then try the following command 
 ```catkin_create_pkg rpi_ros_car std_msgs geometry_msgs rospy roscpp```
