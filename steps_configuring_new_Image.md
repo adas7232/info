@@ -38,3 +38,19 @@ If successful, do the git clone from the existing git repository
 **Creating new package - same name of existing git repo**  
 Assuming the package is already backed-up in git, this step not be needed. Just try to do ```catkin_make``` from ```/home/pi/catkin_ws/```. If not successful, then try the following command 
 ```catkin_create_pkg rpi_ros_car std_msgs geometry_msgs rospy roscpp```
+
+### Step 5 ###
+
+**Configuring vscode - ssh to raspberry pi**   
+If ssh key pair already exists for windows, then copy the public key content into clipboard. If not, generate one either with *openssh* or *puttygen*. On the server side, go to ```/home/pi/.ssh/``` and open a empty file using *nano* or *vi*. Copy the content of the clipboard (public ssh key) into the file and save it as *autorized_keys* 
+Check the connection by going into the Windows command window and type 
+```ssh pi@ipaddress```
+The connection should happen without any issues. Then, go to *vscode* and use *CTRL+SHIFT+P* to open the command pallete and search for ssh. click *Open Configuration File* and edit it as below 
+```
+Host anyname
+  HostName ip-address
+  User pi
+  ForwardAgent yes
+  IdentityFile C:\Users\user\.ssh\id_rsa
+  Port 22
+  ```
