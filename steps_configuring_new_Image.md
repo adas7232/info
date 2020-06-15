@@ -57,4 +57,4 @@ Please note that if you are using ssh for the first time in vscode, then you may
 1. Remote Development
 2. Remote SSH (Nightly)   
 
-Now ssh connection from vscode (Windows) to raspberry pi is established. 
+Now ssh connection from vscode (Windows) to raspberry pi is established. Lastly, dont forget to change the EOL sequence to *LF* to avoid any issues on raspberry pi. To change it permanently for any new code, go to *File -> Preferences -> Setting* and serch for EOL. Then set it up for ```\n```. Thats shoud be it. 
