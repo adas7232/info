@@ -16,7 +16,7 @@ cd ~/catkin_ws/
 catkin_make
 source devel/setup.bash
 ```
-To make it permanent, open ```nano ~/.bashrc```  and add a line at the end like below 
+To make it permanent, open ```nano ~/.bashrc```  and add a line at the end like below    
 ```source /home/pi/catkin_ws/devel/setup.bash```
 Also, if you would like your terminal to automatically direct to a specific folder, you may add another line as below 
 ```cd [project folder path]```
