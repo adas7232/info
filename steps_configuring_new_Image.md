@@ -20,8 +20,10 @@ To make it permanent, open ```nano ~/.bashrc```  and add a line at the end like 
 ```
 source /home/pi/catkin_ws/devel/setup.bash
 ```   
-Also, if you would like your terminal to automatically direct to a specific folder, you may add another line as below 
-```cd [project folder path]```
+Also, if you would like your terminal to automatically direct to a specific folder, you may add another line as below    
+```
+cd ~/catkin_ws/src/rpi_ros_car/src
+```
 ### Step 4 ###
 
 **Configuring git - generate ssh key pair from server and add it to git**  
